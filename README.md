@@ -2,6 +2,7 @@
 CSE210 02 - Hilo Specification
 
 # Team members - Thursday 5PM (MST)
-Svitlana Ienenko
-Yurinii Fuentes
-Eduardo Prieto
+Svitlana Ienenko <br>
+Yurinii Fuentes <br>
+Eduardo Prieto <br>
+Oscar Candia <br>
