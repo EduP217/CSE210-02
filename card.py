@@ -1,7 +1,9 @@
 from msilib.schema import Class
 
 import random 
-
+"""
+class card
+"""
 class Card:
     def __init__(self):
         self.number = random.randint(1,13)
