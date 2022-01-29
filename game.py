@@ -16,7 +16,7 @@ class Game:
             self (Game): An instance of Game.
         """  
 
-        self.player_points = 10
+        self.player_points = 300
         self.card = Card()
     
     def starts(self):
