@@ -38,6 +38,15 @@ class Game:
             
             if self.player_points > 0 and not self.ask_to_play_again():
                 self.player_points = 0
+                print()
+                print('Good bye!')
+                print()
+        else:
+            print('Game over!')
+            print('You have lost all your points, better luck next time :)')
+            print('GAME OVER!')
+            print()
+        
     
     def ask_card_status(self):
         """Allows the player to guess if the next one will be higher or lower. Determine if the player earns 100 points if they guessed correctly, or loses 75 points if they guessed incorrectly.
@@ -46,14 +55,20 @@ class Game:
             self (Game): An instance of Game.
         """
         player_response = input("Higher or lower? [h/l] : ")
+        while player_response != 'H' and player_response != 'h' and player_response != 'L' and player_response != 'l':
+            print()
+            print('Sorry, your answer is not valid, please enter only "h" or "l"')
+            player_response = input("Higher or lower? [h/l] : ")
+        
         card_status = self.card.status
         
-        if player_response == card_status:
+        if player_response.lower() == card_status:
             self.player_points += 100
         else:
             self.player_points -= 75
             if self.player_points <= 0:
                 self.player_points = 0
+                print('Game over :(')
     
     def ask_to_play_again(self):
         """Asks the player if they want to keep playing.
@@ -61,10 +76,13 @@ class Game:
         Args:
             self (Game): An instance of Game.
         """
-        
         player_response = input("Play again? [y/n] : ")
-        
-        if player_response == 'n':
+        while player_response != 'Y' and player_response != 'y' and player_response != 'N' and player_response != 'n':
+            print()
+            print('Sorry, your answer is not valid, please enter only "y" or "n"')
+            player_response = input("Play again? [y/n] : ")
+
+        if player_response.lower() == 'n':
             return False
         else:
             return True
