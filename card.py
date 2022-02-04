@@ -1,5 +1,3 @@
-from msilib.schema import Class
-
 import random 
 """
 class card
